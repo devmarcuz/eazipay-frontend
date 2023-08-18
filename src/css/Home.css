@@ -35,6 +35,12 @@
   align-items: center;
   justify-content: space-between;
 }
+.home .header .header-container .left-section ul .bar {
+  display: none;
+}
+.home .header .header-container .left-section ul .btn {
+  display: none;
+}
 .home .header .header-container .left-section ul li {
   margin-right: 35px;
   font-family: "AeonikTRIAL-Regular";
@@ -67,6 +73,9 @@
   color: white;
   margin: 0;
   box-shadow: 0px 8px 16px 0px rgba(17, 69, 59, 0.2);
+}
+.home .header .header-container .bar {
+  display: none;
 }
 .home .home-container {
   width: 100%;
@@ -712,12 +721,69 @@
   .home .header .header-container .left-section ul li {
     margin-right: 25px;
   }
+  .home .header .header-container .left-section ul.display {
+    display: flex;
+    flex-direction: column;
+    background: #11453b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .home .header .header-container .left-section ul.display li {
+    padding: 40px 0;
+  }
+  .home .header .header-container .left-section ul.display li a {
+    color: white;
+  }
+  .home .header .header-container .left-section ul.display .bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .home .header .header-container .left-section ul.display .bar svg {
+    font-size: 30px;
+  }
+  .home .header .header-container .left-section ul.display .btn {
+    width: 70%;
+    height: 40px;
+    color: rgb(17, 69, 59);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    border: 1px solid rgb(17, 69, 59);
+    font-size: 14px;
+    font-family: "AeonikTRIAL-Regular";
+    background: white;
+  }
+  .home .header .header-container .left-section ul.display .btn:last-child {
+    background: rgb(0, 131, 105);
+    color: white;
+    margin: 0;
+    box-shadow: 0px 8px 16px 0px rgba(17, 69, 59, 0.2);
+    margin-top: 30px;
+  }
   .home .header .header-container .right-section {
     flex: 0.5;
   }
   .home .header .header-container .right-section a {
     width: 78px;
     height: 40px;
+    display: none;
+  }
+  .home .header .header-container .bar {
+    display: flex;
+    color: #11453b;
+    cursor: pointer;
+  }
+  .home .header .header-container .bar svg {
+    font-size: 30px;
   }
   .home .home-container {
     padding: 70px 0;

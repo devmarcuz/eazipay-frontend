@@ -38,6 +38,14 @@
           align-items: center;
           justify-content: space-between;
 
+          .bar {
+            display: none;
+          }
+
+          .btn {
+            display: none;
+          }
+
           li {
             margin-right: 35px;
             font-family: "AeonikTRIAL-Regular";
@@ -76,6 +84,10 @@
             box-shadow: 0px 8px 16px 0px rgba(17, 69, 59, 0.2);
           }
         }
+      }
+
+      .bar {
+        display: none;
       }
     }
   }
@@ -847,6 +859,60 @@
               li {
                 margin-right: 25px;
               }
+
+              &.display {
+                display: flex;
+                flex-direction: column;
+                background: #11453b;
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100%;
+                justify-content: flex-start;
+
+                li {
+                  padding: 40px 0;
+                  a {
+                    color: white;
+                  }
+                }
+
+                .bar {
+                  width: 100%;
+                  display: flex;
+                  justify-content: flex-end;
+                  padding: 30px;
+                  color: #fff;
+                  cursor: pointer;
+
+                  svg {
+                    font-size: 30px;
+                  }
+                }
+
+                .btn {
+                  width: 70%;
+                  height: 40px;
+                  color: rgba(17, 69, 59, 1);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 24px;
+                  border: 1px solid rgba(17, 69, 59, 1);
+                  font-size: 14px;
+                  font-family: "AeonikTRIAL-Regular";
+                  background: white;
+
+                  &:last-child {
+                    background: rgb(0, 131, 105);
+                    color: white;
+                    margin: 0;
+                    box-shadow: 0px 8px 16px 0px rgba(17, 69, 59, 0.2);
+                    margin-top: 30px;
+                  }
+                }
+              }
             }
           }
 
@@ -856,6 +922,17 @@
             a {
               width: 78px;
               height: 40px;
+              display: none;
+            }
+          }
+
+          .bar {
+            display: flex;
+            color: #11453b;
+            cursor: pointer;
+
+            svg {
+              font-size: 30px;
             }
           }
         }
