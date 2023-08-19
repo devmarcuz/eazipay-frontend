@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   background: rgba(240, 247, 235, 0.5);
+  overflow-x: hidden;
 }
 .dashboard .left-dashboard-container {
   flex: 0.2;
@@ -75,6 +76,9 @@
 }
 .dashboard .right-dashboard-container header .container .right-container .notification {
   margin-right: 50px;
+}
+.dashboard .right-dashboard-container header .container .right-container .bar {
+  display: none;
 }
 .dashboard .right-dashboard-container header .container .right-container .profile {
   display: flex;
@@ -387,6 +391,7 @@
   width: 100%;
   margin-left: 45px;
   position: relative;
+  padding-bottom: 20px;
 }
 .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart .contain {
   width: 100%;
@@ -436,6 +441,7 @@
   font-size: 16px;
   font-weight: 700;
   color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 .dashboard .right-dashboard-container .admin-container .recent-activities {
   width: 90%;
@@ -629,4 +635,986 @@
 }
 .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user:last-child {
   margin-bottom: 0;
+}
+@media only screen and (max-width: 576px) {
+  .dashboard .left-dashboard-container {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    z-index: 100;
+    transition: 0.5s all ease-in-out;
+  }
+  .dashboard .left-dashboard-container.display {
+    left: 0;
+  }
+  .dashboard .right-dashboard-container {
+    width: 100%;
+  }
+  .dashboard .right-dashboard-container header .container .left-container {
+    flex: 0.5;
+  }
+  .dashboard .right-dashboard-container header .container .right-container {
+    flex: 0.35;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .notification {
+    display: none;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .profile {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .profile .img {
+    width: 49px;
+    height: 49px;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .profile .details {
+    display: none;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .profile .bar {
+    display: flex;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .profile .bar svg {
+    font-size: 30px;
+    color: #11453b;
+    cursor: pointer;
+  }
+  .dashboard .right-dashboard-container header .container .more {
+    display: none;
+  }
+  .dashboard .right-dashboard-container .admin-container .intro h1 {
+    font-family: "AeonikTRIAL-Bold";
+    font-size: 28px;
+  }
+  .dashboard .right-dashboard-container .admin-container .intro p {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(81, 82, 81);
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container {
+    flex: 1;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .wallet-balance {
+    width: 100%;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .wallet-balance .contain {
+    align-items: flex-start;
+    padding: 20px 30px;
+    flex-direction: column;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .wallet-balance .contain .wallet-amt p {
+    font-size: 16px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .wallet-balance .contain .wallet-amt .amt span {
+    font-size: 26px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .actions .action {
+    width: 250px;
+    margin-bottom: 30px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .actions .action p {
+    font-size: 14px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container {
+    flex: 1;
+    justify-content: flex-start;
+    margin: 0;
+    width: 200px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container {
+    padding: 30px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow .hd-container {
+    margin-bottom: 15px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow .hd-container h1 {
+    font-size: 16px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow .hd-container p {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow .hd-container:last-child {
+    margin-bottom: 0;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow .hd-container .more {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow .hd-container .more svg {
+    transform: translateY(-10%);
+    font-size: 12px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart {
+    margin-left: 0px;
+    padding-bottom: 0px;
+    height: 100px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart .contain {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    transform: translateY(-30%);
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart .contain .prices {
+    margin-top: 2px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 145px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart .contain .prices p {
+    font-size: 6px;
+    margin-top: 7px;
+    margin-bottom: 0;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart .months {
+    position: absolute;
+    bottom: 0%;
+    left: 10%;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart .months p {
+    margin-right: 5px;
+    font-size: 6px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .year {
+    margin-top: 10px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .year .btn {
+    width: 60px;
+    height: 30px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    align-items: center;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent {
+    margin-bottom: 10px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent h1 {
+    font-size: 27px;
+    margin-bottom: 15px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent .search {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent .search .search-container .btn {
+    width: 70px;
+    padding: 12px 0;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent .search .filter {
+    margin-left: 0;
+    border-radius: 16px;
+    padding: 10px 16px 10px 16px;
+    height: 48px;
+    margin-top: 15px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity {
+    background: rgba(242, 241, 241, 0.5);
+    width: 100%;
+    padding: 20px 10px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container {
+    overflow-x: hidden;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity h1 {
+    font-size: 15px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user {
+    padding: 8px 20px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-header {
+    font-size: 12px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile {
+    width: 100%;
+    height: 50px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile .contain .img {
+    width: 35px;
+    height: 35px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile .contain .img p {
+    font-size: 12px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile .contain p {
+    font-size: 12px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .detail {
+    height: 50px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .detail .text {
+    font-size: 10px;
+    color: rgb(141, 142, 141);
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .detail p {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .dashboard .left-dashboard-container {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 30%;
+    z-index: 100;
+    transition: 0.5s all ease-in-out;
+  }
+  .dashboard .left-dashboard-container.display {
+    left: 0;
+  }
+  .dashboard .right-dashboard-container {
+    width: 100%;
+  }
+  .dashboard .right-dashboard-container header .container .left-container {
+    flex: 0.5;
+  }
+  .dashboard .right-dashboard-container header .container .right-container {
+    flex: 0.5;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .bar {
+    display: flex;
+    margin-left: 20px;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .bar svg {
+    font-size: 30px;
+    color: #11453b;
+    cursor: pointer;
+  }
+  .dashboard .right-dashboard-container header .container .more {
+    display: none;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container {
+    flex: 1;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container {
+    flex: 1;
+    justify-content: flex-start;
+    margin: 0;
+    width: 200px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow .hd-container h1 {
+    font-size: 20px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart {
+    margin-left: 20px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart .months p {
+    margin-right: 25px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .year {
+    margin-top: 16px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-header {
+    font-size: 12px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile .contain .img {
+    width: 35px;
+    height: 35px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile .contain .img p {
+    font-size: 14px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile .contain p {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .dashboard {
+    position: relative;
+  }
+  .dashboard .left-dashboard-container {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 30%;
+    z-index: 100;
+    transition: 0.5s all ease-in-out;
+  }
+  .dashboard .left-dashboard-container.display {
+    left: 0;
+  }
+  .dashboard .right-dashboard-container {
+    width: 100%;
+  }
+  .dashboard .right-dashboard-container header .container .left-container {
+    flex: 0.5;
+  }
+  .dashboard .right-dashboard-container header .container .right-container {
+    flex: 0.5;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .bar {
+    display: flex;
+    margin-left: 20px;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .bar svg {
+    font-size: 30px;
+    color: #11453b;
+    cursor: pointer;
+  }
+  .dashboard .right-dashboard-container header .container .more {
+    display: none;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container {
+    flex: 1;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container {
+    flex: 1;
+    justify-content: flex-start;
+    margin: 0;
+    width: 200px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow .hd-container h1 {
+    font-size: 20px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart {
+    margin-left: 20px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart .months p {
+    margin-right: 25px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .year {
+    margin-top: 16px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-header {
+    font-size: 12px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile .contain .img {
+    width: 35px;
+    height: 35px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile .contain .img p {
+    font-size: 14px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile .contain p {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .dashboard .left-dashboard-container {
+    width: 30%;
+  }
+  .dashboard .right-dashboard-container {
+    width: 70%;
+  }
+  .dashboard .right-dashboard-container header {
+    width: 100%;
+    background: white;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.05);
+    padding: 10px 0;
+  }
+  .dashboard .right-dashboard-container header .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dashboard .right-dashboard-container header .container .left-container {
+    flex: 0.65;
+  }
+  .dashboard .right-dashboard-container header .container .right-container {
+    flex: 0.35;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .notification {
+    margin-right: 50px;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .profile {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .profile .img {
+    width: 56px;
+    height: 56px;
+    background: grey;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .profile .img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .profile .details {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .dashboard .right-dashboard-container header .container .right-container .profile .details .title {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(43, 43, 43);
+  }
+  .dashboard .right-dashboard-container header .container .right-container .profile .details .text {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    color: rgb(137, 137, 137);
+  }
+  .dashboard .right-dashboard-container header .container .more svg {
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  .dashboard .right-dashboard-container .admin-container {
+    width: 100%;
+    margin: 50px 0;
+  }
+  .dashboard .right-dashboard-container .admin-container .intro {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .dashboard .right-dashboard-container .admin-container .intro h1 {
+    font-family: "AeonikTRIAL-Bold";
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(41, 42, 41);
+    margin-bottom: 10px;
+  }
+  .dashboard .right-dashboard-container .admin-container .intro p {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(81, 82, 81);
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container {
+    flex: 0.8;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .wallet-balance {
+    width: 100%;
+    height: 170px;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .wallet-balance .wallet-balance-bg {
+    background: rgb(17, 69, 59);
+    height: 170px;
+    overflow: hidden;
+    border-radius: 24px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .wallet-balance .wallet-balance-bg svg {
+    opacity: 0.03;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .wallet-balance .contain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .wallet-balance .contain .wallet-amt p {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(217, 235, 205);
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .wallet-balance .contain .wallet-amt .amt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .wallet-balance .contain .wallet-amt .amt span {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    margin-right: 10px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .wallet-balance .contain button {
+    border: none;
+    outline: none;
+    padding: 12px 28px 12px 28px;
+    border-radius: 24px;
+    background: rgb(217, 235, 205);
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1000000015px;
+    color: rgb(17, 69, 59);
+    cursor: pointer;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .actions .action {
+    flex: 0.22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: white;
+    padding: 16px 0;
+    border-radius: 24px;
+    border: 1px solid rgb(231, 232, 231);
+    box-shadow: 0px 9px 18px 0px rgba(170, 170, 170, 0.15);
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .left-container .actions .action p {
+    margin-top: 10px;
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    color: rgb(81, 82, 81);
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container {
+    flex: 0.2;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 20px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container {
+    width: 90%;
+    background: white;
+    height: 100%;
+    border-radius: 24px;
+    border: 1px solid rgb(231, 232, 231);
+    box-shadow: 0px 6px 12px 0px rgba(170, 170, 170, 0.11);
+    overflow: hidden;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container h1 {
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+    background: rgb(217, 235, 205);
+    box-shadow: 0px 9px 18px 0px rgba(170, 170, 170, 0.15);
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(81, 82, 81);
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container .date {
+    padding: 16px 24px 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(231, 232, 231);
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container .date span {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container .date span svg {
+    margin-right: 5px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container .date span .day {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(81, 82, 81);
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container .date .dt {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(81, 82, 81);
+    margin-bottom: 30px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container .total {
+    padding: 0 16px;
+    padding-bottom: 16px;
+    padding-top: 30px;
+    color: rgb(81, 82, 81);
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container .total .text {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container .total p {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(41, 42, 41);
+    margin-bottom: 10px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container .total .bar {
+    width: 100%;
+    display: flex;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container .total .bar .bg {
+    flex: 0.5;
+    background: rgb(17, 69, 59);
+    height: 8px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container .total .bar .bg:last-child {
+    background: rgb(234, 78, 75);
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container .total .gender {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container .total .gender .gd {
+    flex: 0.5;
+  }
+  .dashboard .right-dashboard-container .admin-container .wallet-container .right-container .container .total .gender .gd .ctn {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 12px;
+    color: rgb(141, 142, 141);
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container {
+    width: 90%;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0px 9px 18px 0px rgba(170, 170, 170, 0.15);
+    border-radius: 24px;
+    padding: 48px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow .hd-container {
+    flex: 100/3;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow .hd-container p {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(81, 82, 81);
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow .hd-container h1 {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(33, 150, 83);
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow .hd-container:nth-child(2) h1 {
+    color: rgb(239, 68, 68);
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow .hd-container .more {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 35px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow .hd-container .more p {
+    margin-right: 10px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart {
+    width: 100%;
+    margin-left: 45px;
+    position: relative;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart .contain {
+    width: 100%;
+    display: flex;
+    align-items: start;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart .contain .prices {
+    margin-top: 7px;
+    margin-right: 10px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart .contain .prices p {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.400000006px;
+    color: rgb(151, 151, 151);
+    margin-bottom: 30px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart .months {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: -1%;
+    left: 5%;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .chart .months p {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.400000006px;
+    color: rgb(151, 151, 151);
+    text-transform: uppercase;
+    margin-right: 33px;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .year {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .dashboard .right-dashboard-container .admin-container .cash-inflow-container .year .btn {
+    width: 72px;
+    height: 44px;
+    padding: 10px 16px 10px 16px;
+    background: rgb(17, 69, 59);
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities {
+    width: 90%;
+    margin: 0px auto;
+    padding: 50px 0;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent {
+    margin-bottom: 10px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent h1 {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 32px;
+    font-weight: 500;
+    color: rgb(41, 42, 41);
+    margin-bottom: 15px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent .search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent .search .search-container {
+    flex: 1;
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(181, 182, 181);
+    overflow: hidden;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent .search .search-container input {
+    flex: 0.9;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0 32px;
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent .search .search-container input::-moz-placeholder {
+    color: rgb(185, 187, 192);
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent .search .search-container input::placeholder {
+    color: rgb(185, 187, 192);
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent .search .search-container .btn {
+    width: 102px;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(217, 235, 205);
+    cursor: pointer;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent .search .filter {
+    margin-left: 15px;
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(181, 182, 181);
+    overflow: hidden;
+    padding: 10px 16px 10px 16px;
+    height: 48px;
+    cursor: pointer;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent .search .filter p {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: -0.019em;
+    color: rgb(141, 142, 141);
+    margin-left: 10px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity {
+    background: rgba(242, 241, 241, 0.5);
+    width: 100%;
+    border-radius: 20px;
+    padding-left: 24px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container {
+    width: 100%;
+    max-height: 613px;
+    overflow: auto;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container::-webkit-scrollbar-thumb {
+    background: rgb(141, 142, 141);
+    border-radius: 8px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity {
+    width: 100%;
+    padding-top: 40px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity:first-child {
+    padding-top: 0;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity h1 {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(81, 82, 81);
+    margin-bottom: 20px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user {
+    padding: 8px 48px;
+    border-radius: 16px;
+    background: white;
+    margin-bottom: 15px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-header {
+    width: 100%;
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 70px;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile .contain {
+    display: flex;
+    align-items: center;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile .contain .img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background: rgb(0, 134, 60);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile .contain .img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile .contain .img p {
+    color: white;
+    text-align: center;
+    font-family: "AeonikTRIAL-Regular";
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .profile .contain p {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(81, 82, 81);
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .detail {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .detail .text {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(141, 142, 141);
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .detail p {
+    font-family: "AeonikTRIAL-Regular";
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(81, 82, 81);
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user .user-profiles .detail p.amt {
+    color: rgb(234, 78, 75);
+  }
+  .dashboard .right-dashboard-container .admin-container .recent-activities .users-activity .container .user-activity .user:last-child {
+    margin-bottom: 0;
+  }
 }/*# sourceMappingURL=Dashboard.css.map */

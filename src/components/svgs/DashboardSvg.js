@@ -168,6 +168,7 @@ export const InflowChart = () => {
       viewBox="0 0 687 225"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="inflow-chart"
     >
       <line x1="1.5" y1="0.5" x2="1.5" y2="223.5" stroke="#E7E8E7" />
       <line x1="676" y1="224" x2="1" y2="224" stroke="#E7E8E7" />

@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import RightDashboardContainer from "../components/RightDashboardContainer";
 import "../css/Dashboard.css";
 import { LeftLogo } from "../components/svgs/DashboardSvg";
 
 const Dashboard = () => {
+  const [bar, setBar] = useState(false);
+
   return (
     <div className="dashboard">
-      <div className="left-dashboard-container">
+      <div className={`left-dashboard-container ${bar && "display"}`}>
         <div className="left-logo">
           <LeftLogo />
         </div>
@@ -365,7 +367,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <RightDashboardContainer />
+      <RightDashboardContainer setBar={setBar} bar={bar} />
     </div>
   );
 };

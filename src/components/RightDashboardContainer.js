@@ -4,8 +4,10 @@ import {
   NotifactonBell,
   WalletBalanceBg,
 } from "./svgs/DashboardSvg";
+import { HiMenuAlt2 } from "react-icons/hi";
+import { FaTimes } from "react-icons/fa";
 
-const RightDashboardContainer = () => {
+const RightDashboardContainer = ({ bar, setBar }) => {
   return (
     <div className="right-dashboard-container">
       <header>
@@ -25,6 +27,15 @@ const RightDashboardContainer = () => {
               <div className="details">
                 <div className="title">Kalu Abasiama</div>
                 <div className="text">Admin</div>
+              </div>
+              <div
+                className="bar"
+                onClick={() => {
+                  setBar(!bar);
+                  console.log(bar);
+                }}
+              >
+                {!bar ? <HiMenuAlt2 /> : <FaTimes />}
               </div>
             </div>
           </div>

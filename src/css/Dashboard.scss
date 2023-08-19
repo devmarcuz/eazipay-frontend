@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   background: rgba(240, 247, 235, 0.5);
+  overflow-x: hidden;
 
   .left-dashboard-container {
     flex: 0.2;
@@ -90,6 +91,10 @@
 
           .notification {
             margin-right: 50px;
+          }
+
+          .bar {
+            display: none;
           }
 
           .profile {
@@ -462,6 +467,7 @@
           width: 100%;
           margin-left: 45px;
           position: relative;
+          padding-bottom: 20px;
 
           .contain {
             width: 100%;
@@ -517,6 +523,7 @@
             font-size: 16px;
             font-weight: 700;
             color: rgba(255, 255, 255, 1);
+            cursor: pointer;
           }
         }
       }
@@ -734,6 +741,1272 @@
 
                 &:last-child {
                   margin-bottom: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Extra small devices (portrait phones)
+  @media only screen and (max-width: 576px) {
+    & {
+      .left-dashboard-container {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        z-index: 100;
+        transition: 0.5s all ease-in-out;
+
+        &.display {
+          left: 0;
+        }
+      }
+
+      .right-dashboard-container {
+        width: 100%;
+
+        header {
+          .container {
+            .left-container {
+              flex: 0.5;
+            }
+
+            .right-container {
+              flex: 0.35;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+
+              .notification {
+                display: none;
+              }
+
+              .profile {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+
+                .img {
+                  width: 49px;
+                  height: 49px;
+                }
+
+                .details {
+                  display: none;
+                }
+
+                .bar {
+                  display: flex;
+
+                  svg {
+                    font-size: 30px;
+                    color: #11453b;
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+
+            .more {
+              display: none;
+            }
+          }
+        }
+
+        .admin-container {
+          .intro {
+            h1 {
+              font-family: "AeonikTRIAL-Bold";
+              font-size: 28px;
+            }
+
+            p {
+              font-family: "AeonikTRIAL-Regular";
+              font-size: 15px;
+              font-weight: 500;
+              color: rgba(81, 82, 81, 1);
+            }
+          }
+          .wallet-container {
+            align-items: flex-start;
+            flex-direction: column;
+
+            .left-container {
+              flex: 1;
+              width: 100%;
+              margin-bottom: 30px;
+
+              .wallet-balance {
+                width: 100%;
+
+                .contain {
+                  align-items: flex-start;
+                  padding: 20px 30px;
+                  flex-direction: column;
+
+                  .wallet-amt {
+                    p {
+                      font-size: 16px;
+                    }
+
+                    .amt {
+                      span {
+                        font-size: 26px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .actions {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .action {
+                  width: 250px;
+                  margin-bottom: 30px;
+
+                  p {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+
+            .right-container {
+              flex: 1;
+              justify-content: flex-start;
+              margin: 0;
+              width: 200px;
+            }
+          }
+
+          .cash-inflow-container {
+            padding: 30px;
+
+            .header-inflow {
+              align-items: flex-start;
+              flex-direction: column;
+              margin-bottom: 0px;
+
+              .hd-container {
+                margin-bottom: 15px;
+
+                h1 {
+                  font-size: 16px;
+                }
+
+                p {
+                  font-size: 12px;
+                  margin-bottom: 5px;
+                }
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                .more {
+                  margin-bottom: 15px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+                  svg {
+                    transform: translateY(-10%);
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+
+            .chart {
+              margin-left: 0px;
+              padding-bottom: 0px;
+              height: 100px;
+
+              .contain {
+                width: 100%;
+                display: flex;
+                align-items: start;
+                transform: translateY(-30%);
+
+                .prices {
+                  margin-top: 2px;
+                  margin-right: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-end;
+                  height: 145px;
+
+                  p {
+                    font-size: 6px;
+                    margin-top: 7px;
+                    margin-bottom: 0;
+                  }
+                }
+              }
+
+              .months {
+                position: absolute;
+                bottom: 0%;
+                left: 10%;
+
+                p {
+                  margin-right: 5px;
+                  font-size: 6px;
+                }
+              }
+            }
+
+            .year {
+              margin-top: 10px;
+
+              .btn {
+                width: 60px;
+                height: 30px;
+                padding: 8px 14px;
+                font-size: 13px;
+                font-weight: 500;
+                text-align: center;
+                align-items: center;
+              }
+            }
+          }
+
+          .recent-activities {
+            .intro-recent {
+              margin-bottom: 10px;
+
+              h1 {
+                font-size: 27px;
+                margin-bottom: 15px;
+              }
+
+              .search {
+                width: 100%;
+                align-items: flex-start;
+                flex-direction: column;
+
+                .search-container {
+                  .btn {
+                    width: 70px;
+                    padding: 12px 0;
+                  }
+                }
+
+                .filter {
+                  margin-left: 0;
+                  border-radius: 16px;
+                  padding: 10px 16px 10px 16px;
+                  height: 48px;
+                  margin-top: 15px;
+                }
+              }
+            }
+
+            .users-activity {
+              background: rgba(242, 241, 241, 0.5);
+              width: 100%;
+              padding: 20px 10px;
+
+              .container {
+                overflow-x: hidden;
+
+                .user-activity {
+                  h1 {
+                    font-size: 15px;
+                  }
+
+                  .user {
+                    padding: 8px 20px;
+
+                    .user-header {
+                      font-size: 12px;
+                    }
+
+                    .user-profiles {
+                      grid-template-columns: repeat(2, 1fr);
+
+                      .profile {
+                        width: 100%;
+                        height: 50px;
+
+                        .contain {
+                          .img {
+                            width: 35px;
+                            height: 35px;
+
+                            p {
+                              font-size: 12px;
+                            }
+                          }
+
+                          p {
+                            font-size: 12px;
+                          }
+                        }
+                      }
+
+                      .detail {
+                        height: 50px;
+
+                        .text {
+                          font-size: 10px;
+                          color: rgba(141, 142, 141, 1);
+                        }
+                        p {
+                          font-size: 12px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Small devices (landscape phones)
+  @media only screen and (min-width: 576px) and (max-width: 768px) {
+    & {
+      .left-dashboard-container {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 30%;
+        z-index: 100;
+        transition: 0.5s all ease-in-out;
+
+        &.display {
+          left: 0;
+        }
+      }
+
+      .right-dashboard-container {
+        width: 100%;
+
+        header {
+          .container {
+            .left-container {
+              flex: 0.5;
+            }
+
+            .right-container {
+              flex: 0.5;
+
+              .bar {
+                display: flex;
+                margin-left: 20px;
+
+                svg {
+                  font-size: 30px;
+                  color: #11453b;
+                  cursor: pointer;
+                }
+              }
+            }
+
+            .more {
+              display: none;
+            }
+          }
+        }
+
+        .admin-container {
+          .wallet-container {
+            align-items: flex-start;
+            flex-direction: column;
+
+            .left-container {
+              flex: 1;
+              width: 100%;
+              margin-bottom: 30px;
+            }
+
+            .right-container {
+              flex: 1;
+              justify-content: flex-start;
+              margin: 0;
+              width: 200px;
+            }
+          }
+
+          .cash-inflow-container {
+            .header-inflow {
+              .hd-container {
+                h1 {
+                  font-size: 20px;
+                }
+              }
+            }
+
+            .chart {
+              margin-left: 20px;
+
+              .months {
+                p {
+                  margin-right: 25px;
+                }
+              }
+            }
+
+            .year {
+              margin-top: 16px;
+            }
+          }
+
+          .recent-activities {
+            .users-activity {
+              .container {
+                .user-activity {
+                  .user {
+                    .user-header {
+                      font-size: 12px;
+                    }
+
+                    .user-profiles {
+                      .profile {
+                        .contain {
+                          .img {
+                            width: 35px;
+                            height: 35px;
+
+                            p {
+                              font-size: 14px;
+                            }
+                          }
+
+                          p {
+                            font-size: 14px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Medium devices (tablets)
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+    & {
+      position: relative;
+      .left-dashboard-container {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 30%;
+        z-index: 100;
+        transition: 0.5s all ease-in-out;
+
+        &.display {
+          left: 0;
+        }
+      }
+
+      .right-dashboard-container {
+        width: 100%;
+
+        header {
+          .container {
+            .left-container {
+              flex: 0.5;
+            }
+
+            .right-container {
+              flex: 0.5;
+
+              .bar {
+                display: flex;
+                margin-left: 20px;
+
+                svg {
+                  font-size: 30px;
+                  color: #11453b;
+                  cursor: pointer;
+                }
+              }
+            }
+
+            .more {
+              display: none;
+            }
+          }
+        }
+
+        .admin-container {
+          .wallet-container {
+            align-items: flex-start;
+            flex-direction: column;
+
+            .left-container {
+              flex: 1;
+              width: 100%;
+              margin-bottom: 30px;
+            }
+
+            .right-container {
+              flex: 1;
+              justify-content: flex-start;
+              margin: 0;
+              width: 200px;
+            }
+          }
+
+          .cash-inflow-container {
+            .header-inflow {
+              .hd-container {
+                h1 {
+                  font-size: 20px;
+                }
+              }
+            }
+
+            .chart {
+              margin-left: 20px;
+
+              .months {
+                p {
+                  margin-right: 25px;
+                }
+              }
+            }
+
+            .year {
+              margin-top: 16px;
+            }
+          }
+
+          .recent-activities {
+            .users-activity {
+              .container {
+                .user-activity {
+                  .user {
+                    .user-header {
+                      font-size: 12px;
+                    }
+
+                    .user-profiles {
+                      .profile {
+                        .contain {
+                          .img {
+                            width: 35px;
+                            height: 35px;
+
+                            p {
+                              font-size: 14px;
+                            }
+                          }
+
+                          p {
+                            font-size: 14px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Large devices (desktops)
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    & {
+      .left-dashboard-container {
+        width: 30%;
+      }
+
+      .right-dashboard-container {
+        width: 70%;
+
+        header {
+          width: 100%;
+          background: white;
+          box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.05);
+          padding: 10px 0;
+
+          .container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .left-container {
+              flex: 0.65;
+            }
+
+            .right-container {
+              flex: 0.35;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+
+              .notification {
+                margin-right: 50px;
+              }
+
+              .profile {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+
+                .img {
+                  width: 56px;
+                  height: 56px;
+                  background: grey;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  margin-right: 15px;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                }
+
+                .details {
+                  display: flex;
+                  justify-content: space-between;
+                  flex-direction: column;
+
+                  .title {
+                    font-family: "AeonikTRIAL-Regular";
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: rgba(43, 43, 43, 1);
+                  }
+
+                  .text {
+                    font-family: "AeonikTRIAL-Regular";
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 0.25px;
+                    color: rgba(137, 137, 137, 1);
+                  }
+                }
+              }
+            }
+
+            .more {
+              svg {
+                margin-top: 30px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
+        .admin-container {
+          width: 100%;
+          margin: 50px 0;
+
+          .intro {
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 40px;
+
+            h1 {
+              font-family: "AeonikTRIAL-Bold";
+              font-size: 36px;
+              font-weight: 700;
+              color: rgba(41, 42, 41, 1);
+              margin-bottom: 10px;
+            }
+
+            p {
+              font-family: "AeonikTRIAL-Regular";
+              font-size: 16px;
+              font-weight: 500;
+              color: rgba(81, 82, 81, 1);
+            }
+          }
+
+          .wallet-container {
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .left-container {
+              flex: 0.8;
+
+              .wallet-balance {
+                width: 100%;
+                height: 170px;
+                position: relative;
+                margin-bottom: 50px;
+
+                .wallet-balance-bg {
+                  background: rgba(17, 69, 59, 1);
+                  height: 170px;
+                  overflow: hidden;
+                  border-radius: 24px;
+                  width: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  z-index: 4;
+
+                  svg {
+                    opacity: 0.03;
+                  }
+                }
+
+                .contain {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  z-index: 10;
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  height: 100%;
+                  justify-content: space-between;
+                  padding: 0 30px;
+
+                  .wallet-amt {
+                    p {
+                      font-family: "AeonikTRIAL-Regular";
+                      font-size: 16px;
+                      font-weight: 500;
+                      color: rgba(217, 235, 205, 1);
+                    }
+
+                    .amt {
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      margin-top: 10px;
+
+                      span {
+                        font-family: "AeonikTRIAL-Regular";
+                        font-size: 32px;
+                        font-weight: 700;
+                        color: white;
+                        margin-right: 10px;
+                      }
+                    }
+                  }
+
+                  button {
+                    border: none;
+                    outline: none;
+                    padding: 12px 28px 12px 28px;
+                    border-radius: 24px;
+                    background: rgba(217, 235, 205, 1);
+                    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);
+                    font-family: "AeonikTRIAL-Regular";
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 0.10000000149011612px;
+                    color: rgba(17, 69, 59, 1);
+                    cursor: pointer;
+                  }
+                }
+              }
+
+              .actions {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .action {
+                  flex: 0.22;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-direction: column;
+                  background: white;
+                  padding: 16px 0;
+                  border-radius: 24px;
+                  border: 1px solid rgba(231, 232, 231, 1);
+                  box-shadow: 0px 9px 18px 0px rgba(170, 170, 170, 0.15);
+
+                  p {
+                    margin-top: 10px;
+                    font-family: "AeonikTRIAL-Regular";
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 0.25px;
+                    color: rgba(81, 82, 81, 1);
+                  }
+                }
+              }
+            }
+
+            .right-container {
+              flex: 0.2;
+              display: flex;
+              justify-content: flex-end;
+              margin-left: 20px;
+
+              .container {
+                width: 90%;
+                background: white;
+                height: 100%;
+                // padding: 0px 16px 16px 16px;
+                border-radius: 24px;
+                border: 1px solid rgba(231, 232, 231, 1);
+                box-shadow: 0px 6px 12px 0px rgba(170, 170, 170, 0.11);
+                overflow: hidden;
+
+                h1 {
+                  padding: 8px 0;
+                  width: 100%;
+                  text-align: center;
+                  background: rgba(217, 235, 205, 1);
+                  box-shadow: 0px 9px 18px 0px rgba(170, 170, 170, 0.15);
+                  font-family: "AeonikTRIAL-Regular";
+                  font-size: 16px;
+                  font-weight: 700;
+                  color: rgba(81, 82, 81, 1);
+                }
+
+                .date {
+                  padding: 16px 24px 16px 24px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-direction: column;
+                  border-bottom: 1px solid rgba(231, 232, 231, 1);
+
+                  span {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 8px;
+
+                    svg {
+                      margin-right: 5px;
+                    }
+
+                    .day {
+                      //styleName: Caption/Small/Regular;
+                      // font-family: Aeonik;
+                      font-size: 12px;
+                      font-weight: 400;
+                      color: rgba(81, 82, 81, 1);
+                    }
+                  }
+
+                  .dt {
+                    // font-family: Aeonik;
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: rgba(81, 82, 81, 1);
+                    margin-bottom: 30px;
+                  }
+                }
+
+                .total {
+                  padding: 0 16px;
+                  padding-bottom: 16px;
+                  padding-top: 30px;
+                  color: rgba(81, 82, 81, 1);
+
+                  .text {
+                    font-family: "AeonikTRIAL-Regular";
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-bottom: 15px;
+                  }
+
+                  p {
+                    font-family: "AeonikTRIAL-Regular";
+                    font-size: 32px;
+                    font-weight: 700;
+                    color: rgba(41, 42, 41, 1);
+                    margin-bottom: 10px;
+                  }
+
+                  .bar {
+                    width: 100%;
+                    display: flex;
+
+                    .bg {
+                      flex: 0.5;
+                      background: rgba(17, 69, 59, 1);
+                      height: 8px;
+
+                      &:last-child {
+                        background: rgba(234, 78, 75, 1);
+                      }
+                    }
+                  }
+
+                  .gender {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 5px;
+
+                    .gd {
+                      flex: 0.5;
+
+                      .ctn {
+                        font-family: "AeonikTRIAL-Regular";
+                        font-size: 10px;
+                        font-weight: 700;
+                        line-height: 12px;
+                        color: rgba(141, 142, 141, 1);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .cash-inflow-container {
+            width: 90%;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0px 9px 18px 0px rgba(170, 170, 170, 0.15);
+            border-radius: 24px;
+            padding: 48px;
+
+            .header-inflow {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 30px;
+
+              .hd-container {
+                flex: 100 / 3;
+
+                p {
+                  font-family: "AeonikTRIAL-Regular";
+                  font-size: 16px;
+                  font-weight: 500;
+                  color: rgba(81, 82, 81, 1);
+                }
+
+                h1 {
+                  font-family: "AeonikTRIAL-Regular";
+                  font-size: 28px;
+                  font-weight: 700;
+                  color: rgba(33, 150, 83, 1);
+                }
+
+                &:nth-child(2) {
+                  h1 {
+                    color: rgba(239, 68, 68, 1);
+                  }
+                }
+
+                .more {
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+                  margin-bottom: 35px;
+
+                  p {
+                    margin-right: 10px;
+                  }
+                }
+              }
+            }
+
+            .chart {
+              width: 100%;
+              margin-left: 45px;
+              position: relative;
+
+              .contain {
+                width: 100%;
+                display: flex;
+                align-items: start;
+
+                .prices {
+                  margin-top: 7px;
+                  margin-right: 10px;
+
+                  p {
+                    font-family: "AeonikTRIAL-Regular";
+                    font-size: 12px;
+                    font-weight: 500;
+                    letter-spacing: 0.4000000059604645px;
+                    color: rgb(151, 151, 151);
+                    margin-bottom: 30px;
+                  }
+                }
+              }
+
+              .months {
+                width: 100%;
+                display: flex;
+                position: absolute;
+                bottom: -1%;
+                left: 5%;
+
+                p {
+                  font-family: "AeonikTRIAL-Regular";
+                  font-size: 12px;
+                  font-weight: 500;
+                  letter-spacing: 0.4000000059604645px;
+                  color: rgb(151, 151, 151);
+                  text-transform: uppercase;
+                  margin-right: 33px;
+                }
+              }
+            }
+
+            .year {
+              width: 100%;
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+
+              .btn {
+                width: 72px;
+                height: 44px;
+                padding: 10px 16px 10px 16px;
+                background: rgba(17, 69, 59, 1);
+                font-family: "AeonikTRIAL-Regular";
+                font-size: 16px;
+                font-weight: 700;
+                color: rgba(255, 255, 255, 1);
+              }
+            }
+          }
+
+          .recent-activities {
+            width: 90%;
+            margin: 0px auto;
+            padding: 50px 0;
+
+            .intro-recent {
+              margin-bottom: 10px;
+
+              h1 {
+                font-family: "AeonikTRIAL-Regular";
+                font-size: 32px;
+                font-weight: 500;
+                color: rgba(41, 42, 41, 1);
+                margin-bottom: 15px;
+              }
+
+              .search {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .search-container {
+                  flex: 1;
+                  background: white;
+                  // padding: 0px 0px 0px 32px
+                  border-radius: 16px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  border: 1px solid rgba(181, 182, 181, 1);
+                  overflow: hidden;
+
+                  input {
+                    flex: 0.9;
+                    background: none;
+                    outline: none;
+                    border: none;
+                    padding: 0 32px;
+                    font-family: "AeonikTRIAL-Regular";
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: 0.25px;
+
+                    &::placeholder {
+                      color: rgba(185, 187, 192, 1);
+                    }
+                  }
+
+                  .btn {
+                    width: 102px;
+                    padding: 12px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(217, 235, 205, 1);
+                    cursor: pointer;
+                  }
+                }
+
+                .filter {
+                  margin-left: 15px;
+                  background: white;
+                  border-radius: 16px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  border: 1px solid rgba(181, 182, 181, 1);
+                  overflow: hidden;
+                  padding: 10px 16px 10px 16px;
+                  height: 48px;
+                  cursor: pointer;
+
+                  p {
+                    font-family: "AeonikTRIAL-Regular";
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 14px;
+                    letter-spacing: -0.019em;
+                    color: rgba(141, 142, 141, 1);
+                    margin-left: 10px;
+                  }
+                }
+              }
+            }
+
+            .users-activity {
+              background: rgba(242, 241, 241, 0.5);
+              width: 100%;
+              border-radius: 20px;
+              padding-left: 24px;
+              padding-bottom: 40px;
+              padding-top: 40px;
+
+              .container {
+                width: 100%;
+                max-height: 613px;
+                overflow: auto;
+
+                &::-webkit-scrollbar-thumb {
+                  background: rgba(141, 142, 141, 1);
+                  border-radius: 8px;
+                }
+
+                .user-activity {
+                  width: 100%;
+                  padding-top: 40px;
+
+                  &:first-child {
+                    padding-top: 0;
+                  }
+
+                  h1 {
+                    font-family: "AeonikTRIAL-Regular";
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: rgba(81, 82, 81, 1);
+                    margin-bottom: 20px;
+                  }
+
+                  .user {
+                    padding: 8px 48px;
+                    border-radius: 16px;
+                    background: white;
+                    margin-bottom: 15px;
+
+                    .user-header {
+                      width: 100%;
+                      font-family: "AeonikTRIAL-Regular";
+                      font-size: 12px;
+                      font-weight: 400;
+                      margin-bottom: 15px;
+                    }
+
+                    .user-profiles {
+                      width: 100%;
+                      display: grid;
+                      grid-template-columns: repeat(4, 1fr);
+                      gap: 30px;
+
+                      .profile {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        height: 70px;
+
+                        .contain {
+                          display: flex;
+                          align-items: center;
+
+                          .img {
+                            width: 40px;
+                            height: 40px;
+                            margin-right: 10px;
+                            background: rgb(0, 134, 60);
+                            border-radius: 50%;
+                            overflow: hidden;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            img {
+                              width: 100%;
+                              height: 100%;
+                              object-fit: cover;
+                            }
+
+                            p {
+                              color: white;
+                              text-align: center;
+                              font-family: "AeonikTRIAL-Regular";
+                            }
+                          }
+
+                          p {
+                            font-family: "AeonikTRIAL-Regular";
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: rgba(81, 82, 81, 1);
+                          }
+                        }
+                      }
+
+                      .detail {
+                        width: 100%;
+                        height: 70px;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+
+                        .text {
+                          font-family: "AeonikTRIAL-Regular";
+                          font-size: 12px;
+                          font-weight: 400;
+                          color: rgba(141, 142, 141, 1);
+                        }
+
+                        p {
+                          font-family: "AeonikTRIAL-Regular";
+                          font-size: 16px;
+                          font-weight: 500;
+                          color: rgba(81, 82, 81, 1);
+
+                          &.amt {
+                            color: rgba(234, 78, 75, 1);
+                          }
+                        }
+                      }
+                    }
+
+                    &:last-child {
+                      margin-bottom: 0;
+                    }
+                  }
                 }
               }
             }
