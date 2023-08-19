@@ -32,7 +32,6 @@ const RightDashboardContainer = ({ bar, setBar }) => {
                 className="bar"
                 onClick={() => {
                   setBar(!bar);
-                  console.log(bar);
                 }}
               >
                 {!bar ? <HiMenuAlt2 /> : <FaTimes />}

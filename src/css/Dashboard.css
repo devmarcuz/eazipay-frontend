@@ -51,12 +51,14 @@
 }
 .dashboard .right-dashboard-container {
   flex: 0.8;
+  overflow-x: hidden;
 }
 .dashboard .right-dashboard-container header {
   width: 100%;
   background: white;
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.05);
   padding: 10px 0;
+  overflow-x: hidden;
 }
 .dashboard .right-dashboard-container header .container {
   width: 90%;
@@ -124,11 +126,13 @@
 .dashboard .right-dashboard-container .admin-container {
   width: 100%;
   margin: 50px 0;
+  overflow-x: hidden;
 }
 .dashboard .right-dashboard-container .admin-container .intro {
   width: 90%;
   margin: 0 auto;
   margin-bottom: 40px;
+  overflow-x: hidden;
 }
 .dashboard .right-dashboard-container .admin-container .intro h1 {
   font-family: "AeonikTRIAL-Bold";
@@ -150,6 +154,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow-x: hidden;
 }
 .dashboard .right-dashboard-container .admin-container .wallet-container .left-container {
   flex: 0.8;
@@ -352,6 +357,7 @@
   box-shadow: 0px 9px 18px 0px rgba(170, 170, 170, 0.15);
   border-radius: 24px;
   padding: 48px;
+  overflow-x: hidden;
 }
 .dashboard .right-dashboard-container .admin-container .cash-inflow-container .header-inflow {
   width: 100%;
@@ -447,6 +453,7 @@
   width: 90%;
   margin: 0px auto;
   padding: 50px 0;
+  overflow-x: hidden;
 }
 .dashboard .right-dashboard-container .admin-container .recent-activities .intro-recent {
   margin-bottom: 10px;
@@ -650,6 +657,7 @@
   }
   .dashboard .right-dashboard-container {
     width: 100%;
+    flex: 1;
   }
   .dashboard .right-dashboard-container header .container .left-container {
     flex: 0.5;
@@ -893,6 +901,7 @@
     left: 0;
   }
   .dashboard .right-dashboard-container {
+    flex: 1;
     width: 100%;
   }
   .dashboard .right-dashboard-container header .container .left-container {
@@ -955,9 +964,6 @@
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .dashboard {
-    position: relative;
-  }
   .dashboard .left-dashboard-container {
     position: absolute;
     top: 0;
@@ -970,6 +976,7 @@
     left: 0;
   }
   .dashboard .right-dashboard-container {
+    flex: 1;
     width: 100%;
   }
   .dashboard .right-dashboard-container header .container .left-container {
